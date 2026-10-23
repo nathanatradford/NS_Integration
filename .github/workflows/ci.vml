@@ -2,14 +2,20 @@ name: Simple CI
 
 on:
   push:
-    - name: Checkout repository
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
       uses: actions/checkout@v4
-    
-    - name: Display message
+      
+      - name: Display message
       run: echo "Continuous Integration workflow is running for CS471!"
-    
-    - name: Demo commands
+      
+      - name: Demo commands
       run: |
-        ls
-        echo Nathan Added additions to build,
-        echo test and deploy a project. BYE!
+          ls
+          echo Nathan Added additions to build,
+          echo test and deploy a project. BYE!
